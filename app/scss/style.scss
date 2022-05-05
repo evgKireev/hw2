@@ -1,0 +1,24 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'media';
+.blog {
+  &__btn {
+    padding: 100px;
+    margin: 250px 50px 0;
+    border: 3px solid #000000;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(152, 228, 168);
+      border: 3px solid #dd6262;
+      a {
+        color: #fff;
+      }
+    }
+  }
+  &__link {
+    font-size: 100px;
+    color: #000000;
+  }
+}
