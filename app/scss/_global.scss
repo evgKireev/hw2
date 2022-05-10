@@ -1,0 +1,37 @@
+.html,
+body {
+  height: 100%;
+}
+
+body {
+  @extend%roboto-500;
+  color: $defaul;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1425px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.container-to {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  @extend%roboto-500;
+  font-size: 43px;
+  line-height: 43px;
+  text-align: center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 5px;
+    background-color: #FCBB08;
+    top: 45px;
+  }
+}
