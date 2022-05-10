@@ -21,3 +21,12 @@
 - перешел на данную ветку, командой git checkout dev
 - Запушил все на GIT в ветку main и dev.
 - Проект готов к работе.
+
+## В проекте PROFILE я сделал:
+- секцию header;
+- секцию main;
+- секцию abaut;
+- секцию skills;
+- секцию portfolio;
+- секцию contact (footer);
+- залил сайт на GIT PAGE
