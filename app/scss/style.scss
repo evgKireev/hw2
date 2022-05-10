@@ -1,24 +1,207 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
-@import 'media';
-.blog {
-  &__btn {
-    padding: 100px;
-    margin: 250px 50px 0;
-    border: 3px solid #000000;
-    cursor: pointer;
-    &:hover {
-      background-color: rgb(152, 228, 168);
-      border: 3px solid #dd6262;
-      a {
-        color: #fff;
+    @import 'vars';
+    @import 'fonts';
+    @import 'reset';
+    @import 'global';
+    @import 'media';
+    .header {
+      padding-bottom: 104px;
+      &__top {
+        padding: 33px 0 32px;
+        border-bottom: 1px solid #828282;
       }
     }
-  }
-  &__link {
-    font-size: 100px;
-    color: #000000;
-  }
-}
+    
+    .menu {
+      &__list {
+        margin-left: 10px !important;
+        display: flex;
+        justify-content: space-between;
+      }
+      &__list-link {
+        color: $accent;
+        font-size: 18px;
+        &:hover {
+          color: $defaul;
+          border-bottom: 1px solid $defaul;
+        }
+      }
+      &__list-link--active {
+        color: $defaul;
+        @extend%roboto-700;
+      }
+    }
+    
+    .header-content {
+      padding-top: 40px;
+      &__inner {
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &__title {
+        width: 225px;
+        font-size: 48px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 45px;
+          height: 5px;
+          background-color: #FCBB08;
+          top: 115px;
+        }
+      }
+      &__text {
+        width: 166px;
+        text-align: center;
+        line-height: 25px;
+        margin-right: 123px;
+      }
+      &__btn {
+        transform: rotate(-90deg);
+        color: $defaul;
+        padding-top: 70px;
+      }
+      &__btn-ru {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin-right: 20px;
+        cursor: pointer;
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 2px;
+          height: 17px;
+          background-color: $defaul;
+          top: 3px;
+          right: -10px;
+        }
+      }
+      &__btn-ebg {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+      }
+      &__btn-ru--active {
+        color: $accent;
+      }
+      &__img {
+        background-image: url(..//images/header.JPG);
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        height: 550px;
+      }
+    }
+    
+    .portfolio {
+      background-color: $bg;
+      padding: 113px 0 20px;
+      &__title {
+        margin-bottom: 47px;
+      }
+      &__img {
+        border: 1px solid $defaul;
+        cursor: pointer;
+        &:hover {
+          border: 1px solid #FCBB08;
+        }
+      }
+      &__item {
+        margin-bottom: 99px;
+      }
+      &__text {
+        margin-top: 45px;
+        @extend%quicksand-500;
+        text-align: center;
+      }
+    }
+    
+    .abaut {
+      padding: 120px 0 107px;
+      text-align: center;
+      &__title {
+        margin-bottom: 18px;
+      }
+      &__text-inner {
+        max-width: 485px;
+        margin: 0 auto;
+      }
+      &__text {
+        margin-bottom: 40px;
+        @extend%quicksand-500;
+      }
+    }
+    
+    .skills {
+      padding: 91px 50px 100px;
+      &__title {
+        margin-bottom: 70px;
+      }
+      &__text {
+        text-align: center;
+        @extend%quicksand-500;
+        margin-bottom: 50px;
+      }
+      &__inner {
+        display: flex;
+        justify-content: space-between;
+      }
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &__item-figma {
+        height: 90px;
+        width: 90px;
+      }
+      &__item-text {
+        margin-top: 20px;
+      }
+    }
+    
+    .contacts {
+      padding: 115px 0 124px;
+      text-align: center;
+      &__title {
+        margin-bottom: 20px;
+      }
+      &__sub-title {
+        width: 275px;
+        margin: 0 auto;
+        margin-bottom: 43px;
+        @extend%quicksand-500;
+      }
+      &__link {
+        padding: 13px 30px 13px;
+        background-color: $defaul;
+        border-radius: 25px;
+        color: #fff;
+      }
+      &__social {
+        margin-top: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 35px;
+        padding-left: 45px;
+      }
+      &__social-img {
+        margin-right: 62px;
+      }
+      &__social-inst {
+        border: 3px solid #070707;
+        padding: 7px 9px 11px 11px;
+        border-radius: 10px;
+      }
+      &__text {
+        font-size: 14px;
+        @extend%quicksand-500;
+        color: $accent;
+      }
+    }
