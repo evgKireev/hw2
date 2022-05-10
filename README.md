@@ -30,3 +30,4 @@
 - секцию portfolio;
 - секцию contact (footer);
 - залил сайт на GIT PAGE
+- https://evgkireev.github.io/hw2-hw3/
