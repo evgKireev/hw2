@@ -31,3 +31,4 @@
 - секцию contact (footer);
 - залил сайт на GIT PAGE
 - сделал плавный скролл
+- https://evgkireev.github.io/hw2-hw3/
