@@ -167,7 +167,7 @@
     }
     
     .contacts {
-      padding: 115px 0 124px;
+      padding: 115px 0 30px;
       text-align: center;
       &__title {
         margin-bottom: 20px;
@@ -204,5 +204,10 @@
         font-size: 14px;
         @extend%quicksand-500;
         color: $accent;
+      }
+      &__img-arrow {
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
       }
     }
