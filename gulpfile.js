@@ -12,7 +12,7 @@ const browserSync = require('browser-sync').create();
 function browsersync() {
   browserSync.init({
     server: {
-      baseDir: 'profile/app/'
+      baseDir: './',
     }
   })
 }
@@ -38,7 +38,7 @@ function scripts() {
 }
 
 function images() {
-  return src('profile/app/images/**/*.*')
+  return src('app/images/**/*.*')
     .pipe(imagemin([
       imagemin.gifsicle({ interlaced: true }),
       imagemin.mozjpeg({ quality: 75, progressive: true }),
@@ -55,10 +55,10 @@ function images() {
 
 function build() {
   return src([
-    'profile/app/**/*.html',
-    'profile/app/css/style.min.css',
-    'profile/app/js/main.min.js'
-  ], { base: 'profile/app' })
+    'app/**/*.html',
+    'app/css/style.min.css',
+    'app/js/main.min.js'
+  ], { base: 'app' })
 
   .pipe(dest('dist'))
 }
@@ -69,9 +69,9 @@ function cleanDist() {
 
 
 function watching() {
-  watch(['profile/app/scss/**/*.scss'], styles);
-  watch(['profile/app/js/**/*.js', '!profile/app/js/main.min.js'], scripts);
-  watch(['profile/app/**/*.html']).on('change', browserSync.reload);
+  watch(['app/scss/**/*.scss'], styles);
+  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+  watch(['*.html']).on('change', browserSync.reload);
 }
 
 
